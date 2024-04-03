@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .column{
+        float: left;
+        padding: 10px;
+    }
+    /*Left and right column*/
+    .column.rightside{
+        width: 25%;
+    }
+    /*middle column*/
+    .column.middle{
+        width:75%;
+    }
+    /*Clear floats after the columns*/
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /*Responsive layout - makes the three columns stack on the top of each other instead of next to each other*/
+    @media screen and(max-width:600px){
+        .column.side,.column.middle{
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="header">
+        <h1><center>Loreum Ipsum</center></h1>
+    </div>
+    <div class="column middle">
+        <p>Loreum Ipsum dolor sit amet,consecutor adipiscing elit.phasellus imperdiet...</p>
+        <p>Loreum Ipsum dolor sit amet,consecutor adipiscing elit.phasellus imperdiet...</p>
+    </div>
+    <div class="rightside">
+        <h2>side</h2>
+        <p>Loreum Ipsum dolor sit amet,consecutor adipiscing elit.</p>
+    </div>
+</body>
+</html>

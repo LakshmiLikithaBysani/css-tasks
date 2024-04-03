@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item1 {
+            grid-area: header;
+        }
+
+        .item2 {
+            grid-area: menu;
+        }
+
+        .item3 {
+            grid-area: main;
+        }
+
+        .item4 {
+            grid-area: right;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
+            gap: 10px;
+            background-color: #2196f3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">About Web Development</div>
+        <div class="item2">Frontend<br>HTML<br>CSS<br>B00tstrap<br>javascript</div>
+        <div class="item3">Web development refers to the creating, building, and maintaining of websites. It includes
+            aspects such as web design, web publishing, web programming, and database management. It is the creation of
+            an application that works over the internet i.e. websites.</div>
+        <div class="item4">Backend:<br>SQL<br>Django<br>php</div>
+        <div class="item5">These are the courses of Web development</div>
+    </div>
+</body>
+
+</html>
